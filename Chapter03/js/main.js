@@ -71,7 +71,7 @@ function addColumns(cityPop){
     			citySize = 'Small';
 
     		} else if (cityPop[i-1].population < 500000){
-    			citysize = 'Medium';
+    			citySize = 'Medium'; //fixed typo here. 
 
     		} else {
     			citySize = 'Large';
