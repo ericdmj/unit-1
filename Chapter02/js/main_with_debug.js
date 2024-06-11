@@ -67,15 +67,23 @@ function addColumns(cityPop){
 			//creates variable with sizes calculated and resultant parameters applied
     		var citySize;
 
-    		if (cityPop[i-1].population < 100000){
-    			citySize = 'Small';
+			if (cityPop[i-1].population < 100000){
+				citySize = 'Small';
+			} else if (cityPop[i-1].population < 500000){
+				citySize = 'Medium';
+			} else {
+				citySize = 'Large';
+			}
 
-    		} else if (cityPop[i-1].population < 500000){
-    			citysize = 'Medium';
+    		// if (cityPop[i-1].population < 100000){
+    		// 	citySize = 'Small';
 
-    		} else {
-    			citySize = 'Large';
-    		};
+    		// } else if (cityPop[i-1].population < 500000){
+    		// 	citysize = 'Medium';  //here there is a typo causing the issue. 
+
+    		// } else {
+    		// 	citySize = 'Large';
+    		// };
 			//applies content to final cell of city row
 			row.insertAdjacentHTML('beforeend','<td>' + citySize + '</td>');
     	};
